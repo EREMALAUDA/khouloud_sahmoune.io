@@ -24,12 +24,12 @@ body{
     width: 10px;
     height: 10px;
     background: #ACC8E5;
-    margin: 0 15px;
+    margin: 0 30px;
     margin-top: 4px;
     border-radius: 50%;
     box-shadow: 0 0 10px #ACC8E5,
-     0 0 20px #ACC8E5,
-      0 0 30px #ACC8E5;
+                0 0 20px #ACC8E5,
+                0 0 30px #ACC8E5;
     animation: animate 15s linear infinite;
     animation-duration: calc(90s /var(--i));
 }
@@ -43,15 +43,40 @@ body{
         transform: translateY(100vh) scale(0);
     }
     100%{
-        transform: translateY(-10vh) scale(1);
+        transform: translateY(-10vh) scale(0.5);
     }
 }
+@media screen and (max-width: 1200px) {
 
-@keyframes animate {
-    0% {
-        transform: translateY(100%) scale(0);
+    .bubbles span{
+        width: 10px;
+        height: 10px;
+        margin: 0 25px;
     }
-    100% {
-        transform: translateY(-20vh) scale(1);
+}
+@media screen and (max-width: 1200px) {
+    .bubbles span{
+
+        margin: 0 25px;
+    }
+}
+@media screen and (max-width: 1000px) {
+
+    .bubbles span{
+
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:800px) {
+   
+    .bubbles span{
+        margin: 0 15px;
+    }
+}
+@media screen and (max-width:700px) {
+ 
+    .bubbles span{
+      
+        margin: 0 12px;
     }
 }
