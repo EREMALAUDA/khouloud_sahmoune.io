@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #112A46;
+    min-height: 100vh;
+    
+
+}
+#starship{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative; 
+    width: 10px;
+    height: 10px;
+    background: #ACC8E5;
+    margin: 0 15px;
+    margin-top: 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ACC8E5,
+     0 0 20px #ACC8E5,
+      0 0 30px #ACC8E5;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(90s /var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #fafefe;
+    box-shadow: 0 0 10px #fafefe, 0 0 20px #fafefe, 0 0 30px #fafefe;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100%) scale(0);
+    }
+    100% {
+        transform: translateY(-20vh) scale(1);
+    }
+}

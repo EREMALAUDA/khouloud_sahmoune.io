@@ -1,0 +1,14 @@
+ //orm doctrine : composer require doctrine/orm
+//twig templates : composer require twig
+//Specifically, it's used to install the Symfony MakerBundle as a development dependency 
+        your Symfony project : composer require symfony/maker-bundle --dev
+//making the home controller : php bin/console make:controller HomeController
+//adding the assets : composer require symfony/asset
+#112A46 dark blue
+#ACC8E5 light blue
+#fafefe white
+#2e2d2e :gris
+creating an entity php bin/console make:entity
+ making the migration php bin/console make:migration 
+ form validator composer require form validator
+ making a syymfony form php bin/console make:form 

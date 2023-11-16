@@ -1,0 +1,148 @@
+body {
+    background-image: url(../assets/capture.png);
+    min-height: 100vh;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(46, 45, 46, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+#blur-wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ldg {
+    color:  #fafefe;
+    font-family: 'poppins', serif;
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 5rem;
+    text-align: center;
+    justify-content: center;
+
+
+}
+span{
+    color: #ACC8E5;
+    font-weight: bolder;
+}
+nav{
+    min-height: 12vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+}
+header{
+    
+    display: flexbox;
+    color: #fafefe;
+    font-family: 'teko',sans-serif;
+    font-weight: medium;
+    letter-spacing: 1.5px;
+
+
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #fafefe;
+    font-size: 30px;
+}
+.ctt{
+   color: #112A46;
+     background-color: #ACC8E5;
+    border: 2px #ACC8E5 solid;
+    padding: 2px; 
+    font-weight: bolder;
+
+}
+.ctt:hover{
+    background-color: transparent;
+    border: 2px  transparent solid;
+    padding: 2px;
+    color: #fafefe;
+
+
+}
+nav ul{
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo{
+    margin-left: 10%;
+    letter-spacing: 1.1px;
+    word-spacing: 0.2rem;
+    font-size: 40px;
+    align-items: center;
+    flex: 2 1 40rem;    
+}
+
+section 
+{
+    display: inline;
+    
+}
+.bouton {
+    position: relative;
+    background: #fafefe;
+    color: #fafefe;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5sec;
+}
+.bouton:hover{
+    background: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+    color: var(--clr);
+    font-weight: bolder;
+
+}
+.bouton::before{
+    content: '';
+    position: absolute; 
+    inset:2px;
+    background-color: #112A46;
+}
+.bouton section{
+    position: relative;
+    z-index: 1;
+
+}
+.chg{
+    margin-top: 10%;
+}
+.container{
+    display: inline-block;
+}
+.name {
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(18) forwards;
+    color: #ACC8E5;
+   
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
