@@ -6,9 +6,7 @@
 body{
     background-color: #112A46;
     min-height: 100vh;
-    
-
-}
+    }
 #starship{
     position: relative;
     width: 100%;
@@ -79,4 +77,46 @@ body{
       
         margin: 0 12px;
     }
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  
+
+}
+.row{
+    
+    background-color: rgb(42, 128, 165);
+    /* padding: 10%; */
+    display: inline-block;
+    width:40vw; 
+    color: #e9edf1;
+    font-family: 'poppins',sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    /* font-size: larger; */
+    /* background-color: rgba(17, 42, 70, 0.8); */
+    /* background-image:url(../assets/bg_ctt.jpg) ;
+    background-size: cover;
+    backdrop-filter: (2px); */
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    width: 100px; 
+    margin-right: 20px;
+    text-align: right; 
+}
+
+.form-control {
+    flex: 1;
+    width: auto ; 
 }
