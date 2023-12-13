@@ -1,0 +1,130 @@
+ //orm doctrine : composer require doctrine/orm
+//twig templates : composer require twig
+//Specifically, it's used to install the Symfony MakerBundle as a development dependency 
+        your Symfony project : composer require symfony/maker-bundle --dev
+//making the home controller : php bin/console make:controller HomeController
+//adding the assets : composer require symfony/asset
+#112A46 dark blue
+#ACC8E5 light blue
+#fafefe white
+#2e2d2e :gris
+creating an entity php bin/console make:entity
+ making the migration php bin/console make:migration 
+ form validator composer require form validator
+ making a syymfony form php bin/console make:form 
+
+
+
+    @media screen and (max-width: 1200px) {
+        .bubbles span{
+    
+            margin: 0 25px;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+    
+        .bubbles span{
+    
+            margin: 0 20px;
+        }
+    }
+    @media screen and (max-width:800px) {
+       
+        .bubbles span{
+            margin: 0 15px;
+        }
+    }
+    @media screen and (max-width:700px) {
+     
+        .bubbles span{
+          
+            margin: 0 12px;
+        }
+    }
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      
+    
+    }
+    .row{
+        
+        background-color: rgb(42, 128, 165);
+        /* padding: 10%; */
+        display: inline-block;
+        width:40vw; 
+        color: #e9edf1;
+        font-family: 'poppins',sans-serif;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        /* font-size: larger; */
+        /* background-color: rgba(17, 42, 70, 0.8); */
+        /* background-image:url(../assets/bg_ctt.jpg) ;
+        background-size: cover;
+        backdrop-filter: (2px); */
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .form-label {
+        width: 100px; 
+        margin-right: 20px;
+        text-align: right; 
+    }
+    
+    .form-control {
+        flex: 1;
+        width: auto ; 
+    }
+{# <div class="blur">
+    
+    <div class="container">
+    <div class="row">
+                     <h1>Create User</h1>
+                    <form method="POST" action="{{ path('form_store') }}">
+                        {{ form_row(form._token) }}
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.name, 'Name', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.surname, 'Surname', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.surname, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.subject, 'Subject', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.message, 'Message', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <!-- Add more similar structures for other fields -->
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div> #}
+            {# </div>
+        </div> #}
