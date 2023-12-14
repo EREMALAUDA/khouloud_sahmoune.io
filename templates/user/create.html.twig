@@ -1,40 +1,65 @@
-<!DOCTYPE html>
+create.twig <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {# <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('../css/create.css') }}">
 
 </head>
 <body>
     <div id="starship">
     <div class="bubbles" >
-    <span style="--i:11"></span>
-    <span style="--i:12"></span>
-    <span style="--i:24"></span>
-    <span style="--i:10"></span>
-    <span style="--i:14"></span>
-    <span style="--i:23"></span>
-    <span style="--i:18"></span>
-    <span style="--i:16"></span>
-    <span style="--i:19"></span>
-    <span style="--i:20"></span>
-    <span style="--i:22"></span>
-    <span style="--i:25"></span>
-    <span style="--i:18"></span>
-    <span style="--i:21"></span>
-    <span style="--i:15"></span>
-    <span style="--i:13"></span>
-    <span style="--i:26"></span>
-    <span style="--i:17"></span>
-    <span style="--i:13"></span>
-    <span style="--i:28 "></span>
+    <span style="--i:10"></span><span style="--i:12"></span><span style="--i:24"></span><span style="--i:11"></span><span style="--i:14"></span><span style="--i:23"></span><span style="--i:16"></span><span style="--i:19"></span><span style="--i:22"></span><span style="--i:25"></span><span style="--i:27"></span><span style="--i:21"></span><span style="--i:15"></span><span style="--i:18"></span><span style="--i:28"></span><span style="--i:13"></span><span style="--i:17"></span><span style="--i:25"></span><span style="--i:20"></span><span style="--i:21"></span>
        </div>
-   </div>
+    <div class="blur">
+    
+    <div class="container">
+    <div class="row">
+                     <h1>Create User</h1>
+                    <form method="POST" action="{{ path('form_store') }}">
+                        {{ form_row(form._token) }}
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.name, 'Name', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.surname, 'Surname', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.surname, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.subject, 'Subject', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                {{ form_label(form.message, 'Message', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
         </body>
 </html>
