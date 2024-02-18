@@ -13,15 +13,20 @@ class UserType extends AbstractType
     {
         $builder
         ->add('name', null,[
-            'attr' => [  'placeholder' => 'name']])
+            // 'attr' => [  'placeholder' => 'name']
+            ])
         ->add('surname', null,[
-            'attr' => [  'placeholder' => 'surname']])
+            // 'attr' => [  'placeholder' => 'surname']
+            ])
         ->add('email',null,[
-            'attr' => [  'placeholder' => 'email']])
+            // 'attr' => [  'placeholder' => 'email']
+            ])
         ->add('subject',null,[
-            'attr' => [  'placeholder' => 'subject']])
+            // 'attr' => [  'placeholder' => 'subject']
+            ])
         ->add('message',null,[
-            'attr' => [  'placeholder' => 'message']])
+            // 'attr' => [  'placeholder' => 'message']
+            ])
         ;
     }
 
@@ -29,6 +34,7 @@ class UserType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+        // 
         ]);
     }
 }
