@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -13,13 +14,32 @@ class User
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
+
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\Regex(
+        pattern: '/^[a-zA-Z]+$/',
+        
+    )]
+    #[Assert\Length(
+        min: 2,
+        minMessage: "The name must be at least {{ limit }} characters long."
+    )]
+     
     private string $name;
-    
+
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\Regex('/^[a-zA-Z]+$/')]
+    #[Assert\Length(
+        min: 3,
+        minMessage: "The surname must be at least {{ limit }} characters long."
+    )]
     private string $surname;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Assert\Regex(
+        pattern:'/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
+        message: "The email value is not valid."
+    )]
     private string $email;
 
     #[ORM\Column(type: 'string', length: 255)]
