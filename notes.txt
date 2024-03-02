@@ -16,3 +16,12 @@ creating an entity php bin/console make:entity
 
 php bin/console doctrine:migrations:diff
 php bin/console doctrine:migrations:migrate
+///////////////////////////////////////////////////////////////
+controller specifies the Symfony built-in TemplateController, which is capable of rendering Twig templates.
+defaults provide the template path to be rendered.
+about_me:
+    path: /about-me
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    defaults:
+        template: 'About_me/About_me.html.twig'
+        

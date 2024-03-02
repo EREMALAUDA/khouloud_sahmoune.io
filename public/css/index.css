@@ -18,9 +18,9 @@ body {
 .ldg {
     color:  #fafefe;
     font-family: 'poppins', serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 800;
-    padding-top: 5rem;
+    padding-top: 4rem;
     text-align: center;
     justify-content: center;
 
@@ -129,20 +129,25 @@ section
     margin-top: 10%;
 }
 .container{
-    display: inline-block;
+    display: block;
 }
 .name {
-    border-right: 5px solid;
+    border-right: 4px solid;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 2s steps(18) forwards;
-    color: #ACC8E5;
-   
+    animation: typing 4s steps(18) forwards;
+    color: #ACC8E5; 
+    margin-top: 2rem; 
+    font-size: 35px;
 }
+
 
 @keyframes typing {
     to {
         width: 100%;
     }
+}
+.ct{
+    font-size: 25px;
 }
