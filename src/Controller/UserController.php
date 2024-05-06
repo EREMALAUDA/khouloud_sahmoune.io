@@ -18,7 +18,6 @@ class UserController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    #[Route('/user', name: 'app_user')]
     //route index 
     #[Route('/user/create', name: 'user_create')]
 //to create a user
