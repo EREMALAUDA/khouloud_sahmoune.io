@@ -4,8 +4,14 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-# about_me:
-#     path: /about-me
-#     controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
-#     defaults:
-#         template: 'About_me/About_me.html.twig'
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+resume:
+    path: /resume
+    controller: App\Controller\ResumeController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\UserController::create
