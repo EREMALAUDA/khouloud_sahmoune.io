@@ -4,15 +4,19 @@
   box-sizing: border-box;
   min-height: 100vh;
   background-color: #f0eae4;
-  font-family: 'roboto';
+  font-family:'poppins' ;
   color: #333333;
+  width: 100vw;
+  overflow-x: hidden;
 }
-
 .timeline {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 90vh; */
+  min-height: auto;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
@@ -22,13 +26,16 @@
   padding: 40px;
   border-radius: 15px;
   gap: 30px;
-  box-shadow: 
+  /* box-shadow: 
   3px 3px 10px rgba(0, 0, 0, 0.1), 
   -3px -3px 10px rgba(0, 0, 0, 0.1), 
   3px -3px 10px rgba(0, 0, 0, 0.1), 
-  -3px 3px 10px rgba(0, 0, 0, 0.1); 
+  -3px 3px 10px rgba(0, 0, 0, 0.1);  */
+  box-shadow:0px 2px 4px rgba(0, 0, 0, 0.3) ;
+
   font-size:20px;
   line-height: 50px;
+  margin-bottom: 4rem;
 }
 .img1{
   
@@ -47,7 +54,6 @@
 }
 .desc p span:first-child{
   font-size: 38px;
-  font-family: 'teko';
   text-transform: uppercase;
 }
 .desc p span:nth-child(2){
@@ -79,7 +85,7 @@
   text-transform: uppercase;
   animation: animate 2s ease-in-out infinite;
   animation-delay: calc(0.1s * var(--i));
-  font-family: 'teko';
+  
   font-size: 45px;
 
   
@@ -96,9 +102,9 @@
   
   }
 }
-.a{
+/* a{
   margin-right: 8px;
-}
+} */
 a {
   text-decoration: none;
   color: #fafafe;
@@ -117,7 +123,8 @@ a:hover{
 
 }
 .fa_solid{
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-weight: medium;
 }
 .fa-arrow-down{
   animation: down 1s infinite alternate;
@@ -173,12 +180,13 @@ a:hover{
 .text-box-1{
   display: flex;
   justify-content: center;
-  font-family: 'roboto';
+  font-family:'poppins' ;
   font-size: 36px;
 }
-.dream-ctnr{
+.dream_ctnr{
   margin-top: 4rem;
   word-spacing: 4px;
+  /* background-color: goldenrod; */
 }
 .dream{
   color: #643173;
@@ -208,7 +216,7 @@ a:hover{
   padding: 20px;
 }
 .card-content h4{
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -218,9 +226,9 @@ a:hover{
   font-size: 25px;
   margin-bottom: 20px; 
   font-size: larger;
-  font-family: 'teko';
+  
   letter-spacing: 2px;
-  text-align: justify;
+  text-align:center; 
 }
 .exper_ctnr{
   font-size: 22px;
@@ -237,7 +245,7 @@ a:hover{
   margin-bottom: 4rem;
 }
 .cards {
-  width: 800px;
+  width: 80%;
   height: 500px;
   perspective: 1000px;
 }
@@ -280,8 +288,7 @@ a:hover{
 
 
 .front {
-  display: flex;
-  ;
+  display: flex;;
 }
 
 .left {
@@ -317,5 +324,249 @@ a:hover{
 .copyright {
   text-align: center;
   font-size: 12px;
-  color: #888; /* Adjust color as needed */
+  color: #888; 
 }
+/* --------------------HOME PAGE DIV------------------- */
+.fa-hm {
+  margin-left: 4rem;
+  margin-top: 1.5rem;
+ }
+.homepage{
+  margin-bottom: 1.5rem; 
+  /* position: fixed; */
+  z-index: 1000;
+}
+/* --------media queries--------- */
+@media (max-width:1130px) {
+  .wavy span{
+    font-size: 36px;
+  }
+  .container{
+    width: 70%;
+    padding: 40px;
+    
+  }
+  .img1{
+    width: 225px;
+  }
+  .desc p span:nth-child(2) {
+    font-size:14px;
+  }
+  a{
+    padding: 6px 12px;
+  }
+}
+@media (max-width:1200px) {
+  .wavy span{
+    font-size: 25px;
+  }
+}
+
+@media (max-width:1100px) {
+  .wavy span{
+    font-size: 20px;
+  }
+  .container{
+    width: 70%;
+    padding: 40px;
+    
+  }
+  .img1{
+    width: 225px;
+  }
+  .desc p span:nth-child(2) {
+    font-size:14px;
+  }
+  a{
+    padding: 6px 12px;
+  }
+}
+@media (max-width:900px) {
+  /* .timeline{
+    min-height:auto;
+  } */
+  .wavy span{
+    font-size: 20px;
+  }
+  .img1{
+    display: none;
+  }
+  .text-box-1{ 
+      font-size: 30px;
+  }
+  .dream{
+    font-size: 30px;
+  }
+  .container {
+    margin-bottom: 3rem;
+  }  
+  .exper_ctnr{
+    font-size: 16px;
+  }
+  a:nth-child(2){
+    margin-bottom: 1.5rem;
+  }
+
+}
+ @media (max-width:785px) {
+  .wavy span{
+    font-size: 16px;
+  }
+  .text-box-1{
+    font-size: 25px;
+  }
+  .dream{
+    font-size: 25px;
+  }
+  .exper_ctnr{
+    font-size: 14px;
+  }
+  .container{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    gap: 0;
+  }
+  .card{
+    width: 280px;
+  }
+  .card:first-child{
+    margin-left: 1rem;
+  }
+  .card-container{
+    width: 98vw;
+  }
+  .card-container h4{
+    font-size: 18px;
+  }
+  /* ----img---- */
+.gift{
+  background-image: url('../assets/zelij.jpg');
+  background-size: contain;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}  
+.cards:hover .front {
+  transform: rotateY(0);
+}
+  .left img{
+    display: none;
+    width: 0;
+  }
+  .front{
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .left {
+    flex: 0;
+    overflow: hidden;
+  }
+ .right{
+  padding: 2rem 4rem 2rem 4rem;
+  background-color: rgb(243, 243, 243);
+  width: calc(100% ); 
+  /* display: flex;
+  flex-wrap: wrap; */
+
+ }
+ .back{
+  display: none;
+ }
+}
+@media (max-width:600px) { 
+  .utl{
+    display: flex;
+    justify-content: center;
+  }
+  .exper_ctnr{
+    width: 70%;
+    font-size: 16px;
+  }
+  .dream{
+    font-weight: normal;
+  }  
+.dream_ctnr{
+    display: block;
+    padding-left: 1rem;
+    width: 96vw;
+  }
+}
+@media (max-width:500px) {
+  body , html {
+    width: 100vw;
+    overflow-x: auto;
+  }
+  .wavy{
+    -webkit-box-reflect: below  0 linear-gradient(transparent, rgba(0, 0, 0, 0));
+  }
+  .wavy span{
+    font-size: 14px;
+    
+  }
+  .container{
+  padding: 20px;
+  background-color: inherit; 
+  border-radius: 0;
+  gap: 25px;
+  box-shadow: none; 
+  width: 100%;
+  /* line-height: normal; */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+.desc p span:first-child {
+  font-size: 25px;
+}
+.desc p  {
+  margin-top: 0;
+}
+.desc{
+  margin-top: 1.5rem;
+}
+}
+ @media (max-width:425px) {
+  .container{
+    padding-left: 0;
+  }
+  .text-box-1 {
+    width: fit-content;
+    margin: 0 auto; 
+    text-align: center;
+    font-size: 20px;
+}
+.exper_ctnr{
+  text-align: center;
+}
+.front{
+  /* height: 70%; */
+
+}
+.right{
+  padding: 8px;
+  /* overflow-y: hidden; */
+  /* background-color: #d4bedd; */
+}
+.desc a{
+  font-size: 15px;
+  padding: 0px 8px 0px 8px;
+  border-radius: 2px;
+}
+.card:first-child{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.wavy{
+  font-size: 12px;
+}
+}
+
+/*@media (max-width:230px) {
+  .wavy span{
+    font-size: 6px;
+  }
+  .desc p span:first-child {
+    font-size: 20px;
+  }
+}    */

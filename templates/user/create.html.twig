@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
 </head>
@@ -24,14 +26,16 @@
             <div class="err ">{{ form_errors(form.name)}}</div>
             <div class="err ">{{ form_errors(form.surname)}}</div>
             <div class="err ">{{ form_errors(form.email)}}</div>
- 
+                             <div class="homepage">
+    {# <a href="{{ path('home') }}" class='fa-hm'>
+        <i class="fas fa-home"></i>
+    </a> #}
+</div>
             <div class="container form-ctnr w-75 mt-5 ">
                 <form method="POST" action="{{ path('form_store') }}">
                     {{ form_row(form._token) }}
-                    
                     <div class="row">
                         <div class="col-md-6 col-12 p-5 custom_fm">
-                            
                             <h1>Contact me.</h1>
                             <div class="row pb-1">
                                 <div class="col ">
@@ -69,7 +73,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                          {{ form_label(form.name, 'Message') }}
-                                        {{ form_widget(form.message, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                         {{ form_widget(form.message, {'attr': {'class': 'form-control rounded-0'}}) }}
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +84,7 @@
                             </div>
                             <div class="col-md-6 col-12 pe-0">
                                 <div class="image">
-                                <div class='ms-2 quote'>let me take your dreams to the stars . . . </div>
+                                {# <div class='ms-2 quote'>let me take your dreams to the stars  </div> #}
                             <img src="{{asset('../assets/aleksi_bg.png')}}" alt="oops" >
                         </div>
                     </div>

@@ -1,11 +1,11 @@
+/* GENERAL HTML STYLING */
 body, html { 
     background-color:black;
 }
-
+/* BUBBLES DISPLAY */
 #starship {
     position: relative;
     width: 100%;
-    height: 100vh;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -27,7 +27,6 @@ body, html {
                 0 0 30px #ACC8E5;
     animation: animate 15s linear infinite;
     animation-duration: calc(90s /var(--i));
-
 }
 
 .bubbles span:nth-child(even){
@@ -36,7 +35,7 @@ body, html {
                 0 0 20px #fafefe,
                 0 0 30px #fafefe;
 }
-
+/* ANIMATING THE BUBBLES */
 @keyframes animate {
     0% {
         top: 100vh;
@@ -45,6 +44,89 @@ body, html {
         top: -10px; 
     }
 }
+/* FORM DISPLAY */
+.form-ctnr{
+    background-color:rgb(0,0,0,0.8);
+    color: #112A46;
+    font-family: 'poppins',sans-serif;
+    letter-spacing: 2px;
+    border: 1px #e9edf1 solid;
+    display: grid;
+    position: relative;
+    z-index: 1;
+    /* box-shadow: 0 0 10px #e9edf1; */
+    /* height: 55%; */
+}
+input{
+    margin-right: 60px;
+}
+/* ALEKSI */
+.image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    color:#e9edf1 ;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* FORM ADITIONAL STYLING */
+h1{
+ padding-left: 0.5rem;
+}
+.custom_fm{
+    background-color:#fafefe;
+    height: 85vh;
+}
+.btn{
+    background-color: indigo;
+    border: 0;
+    margin-left: 30%;
+    /* padding-left: 1rem; */
+}
+.btn:hover{
+    background-color: #3A006F;
+}
+/* TO THE STARS */
+.quote{
+    padding-top: 5%;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(18) forwards;
+}
+/* STARS ANIMATION */
+@keyframes typing {
+    to {
+        width: 80%;
+    }
+}
+/* ERRORS */
+.err li{
+    list-style-type: none;
+    font-size: small;
+    color: red;
+}
+a{
+color: #fafafa;
+padding-left: 4rem;
+padding-top: 2rem;
+font-size: 1.5rem;
+}
+/* GO BACK HOME*/
+.fa-hm i{
+    margin-left: 3rem;
+    padding-top: 2rem;
+}
+/* ---------resposivness--------------- */
 
 @media screen and (max-width: 1800px) {
 
@@ -67,12 +149,48 @@ body, html {
     }
 }
 @media screen and (max-width: 1000px) {
-
+    /* BUBBLES-- */
     .bubbles span{
-
         margin: 0 20px;
     }
+    /*MORE STYLING*/
+    .image{
+        display: none;
+        width: 0;
+    }
+    .custom_fm {
+        width: 100%;
+      }
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
+
+
+.form-group label {
+    flex: 0 0 auto;
+    width: 100px; 
+    margin-right: 10px; 
+    white-space: nowrap; 
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.form-group .form-control {
+    flex: 1 1 auto;
+    width: 180px; 
+    margin-left: 12px; 
+}
+
+/* Ensure all input fields have the same width */
+/* .form-control-sm {
+    width: 140px; 
+} */
+
+}
+
 @media screen and (max-width:800px) {
    
     .bubbles span{
@@ -85,71 +203,4 @@ body, html {
       
         margin: 0 12px;
     }
-}
-.form-ctnr{
-    background-color:rgb(0,0,0,0.8);
-    color: #112A46;
-    font-family: 'poppins',sans-serif;
-    letter-spacing: 2px;
-    border: 1px #e9edf1 solid;
-    display: grid;
-    position: relative;
-    z-index: 1;
-    /* box-shadow: 0 0 10px #e9edf1; */
-    height: 60%;
-}
-input{
-    margin-right: 60px;
-}
-.image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    color:#e9edf1 ;
-
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-h1{
- padding-left: 0.5rem;
-}
-.custom_fm{
-    background-color:#fafefe;
-}
-.btn{
-    background-color: indigo;
-    border: 0;
-    margin-left: 30%;
-    /* padding-left: 1rem; */
-}
-.btn:hover{
-    background-color: #3A006F;
-}
-.quote{
-    padding-top: 5%;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 2s steps(18) forwards;
-}
-
-@keyframes typing {
-    to {
-        width: 80%;
-    }
-}
-.err li{
-    list-style-type: none;
-    font-size: small;
-    color: red;
 }

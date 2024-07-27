@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>about-me</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/resume.css">
-    <title>about-me</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div class="homepage">
+    <a href="{{ path('home') }}" class='fa-hm'>
+        <i class="fas fa-home"></i>
+    </a>
+</div>
 
 <div class="timeline">
     <div class="container main-container">
@@ -51,7 +52,7 @@
                         <span>
                             A dedicated web developer <br>
                         </span>
-                        
+
                         <span>
                             driven by the art of crafting digital experiences.
                         </span>  
@@ -129,10 +130,11 @@
     <div class="text-box-1 dream_ctnr">
      i'll help make your <span class='dream'>digital  dream </span> come true .
     </div>
+    <div class="utl">
     <div class="exper_ctnr" >
         Utilizing expertise  to craft a seamless and dynamic website tailored to your needs. <br>
     </div>
-
+</div>
 <div class="card-container">
 
 <div class="card">
@@ -187,6 +189,17 @@
 
 
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+            if (window.matchMedia("(max-width: 238px)").matches) {
+                const resume = document.querySelector('.desc a');
+                resume.textContent = 'my resume';
+            }
+            else if  (window.matchMedia("(max-width: 250px)").matches) {
+                const morocco = document.querySelector('.right');
+                morocco.textContent = 'based in morocco i can take yout dream to the stars';}
+        });
+        </script>
 </body>
 
 </html>

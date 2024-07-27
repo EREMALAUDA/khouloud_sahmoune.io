@@ -15,3 +15,7 @@ resume:
 contact:
     path: /contact
     controller: App\Controller\UserController::create
+
+my_work:
+    path: /my_work
+    controller: App\Controller\ContentController::index
