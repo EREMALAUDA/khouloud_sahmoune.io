@@ -45,7 +45,7 @@ class User
     #[ORM\Column(type: 'string', length: 255)]
     private string $subject;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'string', length: 255)]
     private string $message;
 
     public function getId(): ?int

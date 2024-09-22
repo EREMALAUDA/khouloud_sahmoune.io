@@ -26,7 +26,7 @@
             <div class="err ">{{ form_errors(form.name)}}</div>
             <div class="err ">{{ form_errors(form.surname)}}</div>
             <div class="err ">{{ form_errors(form.email)}}</div>
-                             <div class="homepage">
+          <div class="homepage">
     {# <a href="{{ path('home') }}" class='fa-hm'>
         <i class="fas fa-home"></i>
     </a> #}
@@ -41,7 +41,7 @@
                                 <div class="col ">
                                     <div class="form-group">
                                         {{ form_label(form.name, 'Name') }}
-                                        {{ form_widget(form.name, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                        {{ form_widget(form.name, {'attr': {'class': 'form-control rounded-0' , 'placeholder':'name'}}) }}
                                     </div></div>
                             
                             </div>
@@ -49,7 +49,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                          {{ form_label(form.name, 'Surname') }}
-                                        {{ form_widget(form.surname, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                        {{ form_widget(form.surname, {'attr': {'class': 'form-control rounded-0', 'placeholder':'surname'}}) }}
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                          {{ form_label(form.name, 'E-mail') }}
-                                        {{ form_widget(form.email, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                        {{ form_widget(form.email, {'attr': {'class': 'form-control rounded-0', 'placeholder':'e-mail'}}) }}
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                          {{ form_label(form.name, 'Subject') }}
-                                        {{ form_widget(form.subject, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                        {{ form_widget(form.subject, {'attr': {'class': 'form-control rounded-0', 'placeholder':'subject'}}) }}
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                          {{ form_label(form.name, 'Message') }}
-                                         {{ form_widget(form.message, {'attr': {'class': 'form-control rounded-0'}}) }}
+                                         {{ form_widget(form.message, {'attr': {'class': 'form-control rounded-0', 'placeholder':'message'}}) }}
                                     </div>
                                 </div>
                             </div>

@@ -56,6 +56,6 @@ public function store(Request $request): Response
 #[Route('/user', name: 'form_success')]
 public function success(): Response
 {
-    return $this->render('user_form/index.html.twig');
+    return $this->render('home/index.html.twig');
 }
 }

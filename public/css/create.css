@@ -2,6 +2,9 @@
 body, html { 
     background-color:black;
 }
+.form-control::placeholder{
+    opacity: 0;
+}
 /* BUBBLES DISPLAY */
 #starship {
     position: relative;
@@ -54,8 +57,6 @@ body, html {
     display: grid;
     position: relative;
     z-index: 1;
-    /* box-shadow: 0 0 10px #e9edf1; */
-    /* height: 55%; */
 }
 input{
     margin-right: 60px;
@@ -83,13 +84,12 @@ h1{
 }
 .custom_fm{
     background-color:#fafefe;
-    height: 85vh;
+    max-height: min-content;
 }
 .btn{
     background-color: indigo;
     border: 0;
     margin-left: 30%;
-    /* padding-left: 1rem; */
 }
 .btn:hover{
     background-color: #3A006F;
@@ -129,25 +129,13 @@ font-size: 1.5rem;
 /* ---------resposivness--------------- */
 
 @media screen and (max-width: 1800px) {
-
-    .bubbles span{
-
-        margin: 0 25px;
+    .bubbles {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
     }
 }
-@media screen and (max-width: 1600px) {
 
-    .bubbles span{
-
-        margin: 0 30px;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .bubbles span{
-
-        margin: 0 25px;
-    }
-}
 @media screen and (max-width: 1000px) {
     /* BUBBLES-- */
     .bubbles span{
@@ -184,23 +172,52 @@ font-size: 1.5rem;
     margin-left: 12px; 
 }
 
-/* Ensure all input fields have the same width */
-/* .form-control-sm {
-    width: 140px; 
-} */
-
 }
-
-@media screen and (max-width:800px) {
-   
-    .bubbles span{
-        margin: 0 15px;
+ @media screen and (max-width: 500px) {  
+    .bubbles {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
     }
-}
-@media screen and (max-width:700px) {
+    label {
+        display: none;
+    }
+    h1{
+        margin-top:8%;  
+
+    }
+    .form-group .form-control { 
+        width: 100%;  
+        margin: 0;  
+        border: none;
+        border-bottom: 1px #112A46 solid;
+    }
+    .custom_fm input {
+        width: 70%; 
+        padding: 2px; 
+        font-size: 14px; 
+        padding-top: 3%;
+    }
+    .custom_fm {
+        width: 100%; 
+        }
+        .form-ctnr{
+            border: none;
+        }
+        .form-control::placeholder{
+            opacity: 1;
+        }
+        .btn{
+            margin-top: 2rem;
+    margin-left: 20%;
+
+        }
+        .form-ctnr {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            height: 80vh; 
+        }
+    
+        } 
  
-    .bubbles span{
-      
-        margin: 0 12px;
-    }
-}
