@@ -68,6 +68,7 @@ li:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
 }
 
 span{
@@ -167,7 +168,7 @@ section {
     /* ---------content-------------- */
    .ldg{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     overflow-y: hidden;
     font-size:20px;
     line-height: 4rem;
@@ -191,9 +192,13 @@ section {
     }
     .ldg{
         font-size:15px ;
-        line-height: 2rem;
-        margin-top:20%;
-    }
+        /* line-height: 2rem; */
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+
+}
 }
 @media (max-width:340px) {
     .name{
@@ -201,6 +206,7 @@ section {
     }    
     .ldg , .ct{
         font-size: 10px;
+        
     }
     .container{
         padding-top: 0;
@@ -274,8 +280,13 @@ section {
     .toggle_btn{
         display: none;
     }
-    .ldg{
+    /* .ldg{
         margin-top: 8%;
+    } */
+    .ldg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
     }
 } 
 /* ---------------- */
