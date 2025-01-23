@@ -1,5 +1,5 @@
 # Base image with PHP
-FROM php:8.2-cli
+FROM php:8.3-cli
 
 # Set the working directory
 WORKDIR /app
