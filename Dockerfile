@@ -30,7 +30,7 @@ COPY . .
 RUN composer install --prefer-dist --optimize-autoloader
 
 # Expose a port (adjust based on your app needs, e.g., 8000)
-EXPOSE 8000
+EXPOSE 80
 
 # Run Symfony server as default command (or use another command if needed)
 CMD ["symfony", "serve", "--no-tls"]
