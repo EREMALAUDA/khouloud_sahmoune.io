@@ -1,6 +1,14 @@
 version: '3'
 
 services:
+  web:
+    build: .
+    ports:
+      - "80:80"  # Ensure port 80 is mapped to external machine
+    environment:
+      - DATABASE_URL=mysql://user:password@database/db_name  # Update DB URL if necessary
+    command: symfony serve -d --no-tls --host 0.0.0.0  # Force Symfony to bind to 0.0.0.0
+
   database:
     image: mysql:8.0
     container_name: prtf_sql
@@ -31,10 +39,11 @@ services:
     networks:
       - symfony_network
     environment:
-      COMPOSER_ALLOW_SUPERUSER: "1" # Enable Composer plugins as superuser
+      COMPOSER_ALLOW_SUPERUSER: "1"  # Enable Composer plugins as superuser
+    command: symfony serve -d --no-tls --host 0.0.0.0  # Force Symfony to bind to 0.0.0.0
 
 volumes:
-  mysql_data: {} # Volume for MySQL data persistence
+  mysql_data: {}  # Volume for MySQL data persistence
 
 networks:
   symfony_network:
