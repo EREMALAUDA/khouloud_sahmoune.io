@@ -33,4 +33,4 @@ RUN composer install --prefer-dist --optimize-autoloader
 EXPOSE 80
 
 # Run Symfony server as default command (or use another command if needed)
-CMD ["symfony", "serve", "--no-tls"]
+CMD ["symfony", "serve", "--allow-all-ip"]
