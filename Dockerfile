@@ -34,3 +34,6 @@ EXPOSE 80
 
 # Run Symfony server as default command (or use another command if needed)
 CMD ["symfony", "serve", "--allow-all-ip"]
+
+# Install MySQL PDO extension
+RUN docker-php-ext-install pdo pdo_mysql
