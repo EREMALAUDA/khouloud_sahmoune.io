@@ -2,7 +2,7 @@
 services:
   database:
     image: mysql:8.0
-    container_name: prtf_sql
+    container_name: prtf
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
       MYSQL_USER: ${MYSQL_USER:-user}
